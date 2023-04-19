@@ -1,0 +1,25 @@
+#!/bin/bash
+#*******************************************************************************
+# Author            : Gin
+# Gitlab            : https://gitlab.com/parafait
+# Use               : Script to choose monitor layout
+# Reference         : DT dmenu scripts, Luke Smith dmenu scripts video
+#*******************************************************************************
+
+declare -a options=(
+"dual"
+"monitor"
+"manual"
+    )
+
+# Pipeing above array to dmenu
+# using printf to format one item in a line
+choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -p "Chose display output option")
+
+case "$choice" in 
+    dual ) xrandr --output eDP1 --mode 1366x768 --pos 1920x494 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off;;
+    monitor ) xrandr --output eDP1 --off --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off;;
+    manual ) arandr;;
+esac 
+
+feh --no-fehbg --bg-fill --randomize ~/Pictures/walls/* 

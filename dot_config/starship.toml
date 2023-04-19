@@ -1,0 +1,45 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[--➜](fg:#b5bd68)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[--➜](fg: #cc6666)"
+
+# Whether prompt should be single or two line
+[line_break]
+disabled=false    # prompt will be 2 line
+
+#format="$all
+
+#format = """
+#[┌───────────────────>](bold green)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) """
+
+# If directory is read only show a lock icon 
+[directory]
+style = "bold fg:#b294bb"
+read_only = " [] "
+read_only_style = "fg:#cc6666"
+
+# replace the directory text
+[directory.substitutions]
+"~" = " "
+
+# duration of command before the command duration is shown in prompt 
+#[cmd_duration]
+#min_time = 1_000  # Show command duration over 1000 milliseconds (=1 sec)
+#format = " [$duration]($style)"
+
+# Time format to be displayed in prompt
+#[time]
+#time_format = "%_I:%M %p"
+#format = "$time "
+#style = "green"
+#disabled = false
+
+# username to be shown always in prompt
+[username]
+style_user = "#70c0b1"
+show_always = true

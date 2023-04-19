@@ -1,0 +1,117 @@
+#
+#
+# 888888b.                     888            .d8888b.                    888                          
+# 888  "88b                    888           d88P  Y88b                   888                          
+# 888  .88P                    888           888    888                   888                          
+# 8888888K.   8888b.  .d8888b  88888b.       888        888  888 .d8888b  888888 .d88b.  88888b.d88b.  
+# 888  "Y88b     "88b 88K      888 "88b      888        888  888 88K      888   d88""88b 888 "888 "88b 
+# 888    888 .d888888 "Y8888b. 888  888      888    888 888  888 "Y8888b. 888   888  888 888  888  888 
+# 888   d88P 888  888      X88 888  888      Y88b  d88P Y88b 888      X88 Y88b. Y88..88P 888  888  888 
+# 8888888P"  "Y888888  88888P' 888  888       "Y8888P"   "Y88888  88888P'  "Y888 "Y88P"  888  888  888
+#                                                                                                                               
+#                                                                                                                               
+#                                                                                                                                
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+#
+# Export LANG as IN.utf8 some programs do not count IN as utf8
+LANG="en_IN.utf8"
+export LANG
+#
+# Ignore duplicate commands in history
+HISTCONTROL=ignoredups
+#
+
+#
+# 888888b.                     888                  d8888 888 d8b                   
+# 888  "88b                    888                 d88888 888 Y8P                   
+# 888  .88P                    888                d88P888 888                       
+# 8888888K.   8888b.  .d8888b  88888b.           d88P 888 888 888  8888b.  .d8888b  
+# 888  "Y88b     "88b 88K      888 "88b         d88P  888 888 888     "88b 88K      
+# 888    888 .d888888 "Y8888b. 888  888        d88P   888 888 888 .d888888 "Y8888b. 
+# 888   d88P 888  888      X88 888  888       d8888888888 888 888 888  888      X88 
+# 8888888P"  "Y888888  88888P' 888  888      d88P     888 888 888 "Y888888  88888P' 
+#                                                                                  
+#
+
+# Source Updated .bashrc
+alias src='source ~/.bashrc'
+#
+# if we are creating a directory then create parent directories as well and make it verbose
+alias mkdir="mkdir -pv"
+#
+# Move to the parent folder.
+alias ..='cd ..;pwd'
+#
+# Move up two parent folders.
+alias ...='cd ../..;pwd'
+#
+# Move to Home Directory
+alias hm='cd ~'
+
+# exa alias for use as substitue for ls and tree
+alias ls='exa -ax --icons --sort name --group-directories-first'
+alias ll='exa -lahb --time-style default --icons -s name --group-directories-first'
+alias lr='exa -ahlT --icons --sort name --time-style default --group-directories-first -L 2'
+alias tree='exa -T'
+alias trl='exa -alT --time-style default --sort name'
+
+# youtube-dl-p alias
+	# Video Alias
+alias ytv='yt-dlp'
+alias ytv-best='yt-dlp --ignore-config -o "$HOME/Videos/%(title)s_%(channel)s.%(ext)s" -f "bv*+ba/b" --remux-video "mkv"'
+
+	# Playlist Alias
+alias ytvp='yt-dlp --config-location "$HOME/.config/yt-dlp/config_playlist"'
+alias ytap='yt-dlp -o "$HOME/Videos/%(playlist_title)s/%(playlist_index)s_%(title)s.%(ext)s" -x --audio-format "best" --audio-quality "best" '
+
+	# Audio Alias
+alias yta-best='yt-dlp -o "$HOME/Downloads/yt_audio/%(title)s_%(channel)s.%(ext)s" -x --audio-format "best" --audio-quality "best"'
+alias yta-mp3='yt-dlp -o "$HOME/Downloads/yt_audio/%(title)s_%(channel)s.%(ext)s" -x --audio-format "mp3" --audio-quality "best"'
+alias yta-opus='yt-dlp -o "$HOME/Downloads/yt_audio/%(title)s_%(channel)s.%(ext)s" -x --audio-format "opus" --audio-quality "best"'
+alias yta-vorbis='yt-dlp -o "$HOME/Downloads/yt_audio/%(title)s_%(channel)s.%(ext)s" -x --audio-format "vorbis" --audio-quality "best"'
+
+	# Batch Files
+alias yt-batch='yt-dlp -a "$HOME/Videos/yt-batch.txt"'
+alias ytp-batch='yt-dl -a "$HOME/Videos/ytp-batch.txt" --config-location "$HOME/.config/yt-dlp/config_playlist"'
+
+# alias for the dotfiles backup 
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias cadd='config add'
+alias ccom='config commit -m'
+alias cpush='config push'
+alias cstat='config status'
+
+# git alias
+alias gi='git init'
+alias ga='git add'
+alias gc='git commit -m'
+alias gcl='git clone'
+alias gp='git push'
+alias gb='git branch'
+
+# alias for pacman
+alias install='sudo pacman -S'
+alias remove='sudo pacman -R'
+alias uninstall='sudo pacman -R'
+
+# Quit Terminal when running bash
+alias qq='exit'
+
+# Weather
+alias weather='curl wttr.in'
+alias wmang='curl wttr.in/mangaluru'
+alias wbang='curl wttr.in/bengaluru'
+
+
+# enable startship prompt
+#eval "$(starship init bash)"

@@ -1,0 +1,11 @@
+* {
+    xbg: 		#1d1f21;
+    xfg: 		#c5c8c6;
+    xRed: 		#cc6666;
+    xGreen:		#b5bd68;
+    xYellow: 	#f0c674;
+    xOrange:	#de935f;
+    xAqua: 		#8abeb7;
+    xBlue: 		#81a2be;
+    xPurple:	#b294bb;
+}

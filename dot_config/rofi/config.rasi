@@ -1,0 +1,65 @@
+configuration {
+	modi:                   "combi";
+	combi-modi:             "drun,run";
+	font:                   "Amulya Bold 11";
+	show-icons:             true;
+	disable-history:        false;
+	combi-hide-mode-prefix: true;
+	drun-display-format:    "{name}";
+	max-history-size:       5;
+	terminal:               "alacritty";
+	
+}
+
+*{
+	background:                     #1d1f21;
+	alternate-normal-background:    #1d1f21;
+	foreground:                     #c5c8c6;
+	selected-normal-background:     #b5bd68;
+	selected-normal-foreground:     #1d1f21;
+	separatorcolor:                 #1d1f21;
+}
+
+window {
+    anchor: 	north;
+    location: 	north;
+    width: 		100%;
+    padding: 	7px;
+    border: 	3px;
+    border-color: #FFFFFF00;
+    children: 	[ horibox ];
+}
+
+horibox {
+    orientation: 	horizontal;
+    children: 		[prompt, entry, listview];
+}
+
+listview {
+    layout: horizontal;
+    lines: 	100;
+}
+
+entry {
+    padding: 2px;
+    expand:  false;
+    width:   12em;
+    placeholder: "Search Applications";
+    vertical-align: 	0.5;
+    horizontal-align: 	0.5;
+}
+
+element {
+    padding: 1px 20px 1px 20px;
+    border-radius: 5px;
+}
+
+prompt {
+    border:     		0;
+    vertical-align: 	0.5;
+    padding:          	5px;
+    border-radius: 		5px;
+    background-color: 	#b294bb;
+    text-color:       	#1d1f21;
+    
+}

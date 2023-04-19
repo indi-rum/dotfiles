@@ -1,0 +1,30 @@
+{
+    "anime": {
+        "download_path": "/home/gin/media/torrent",
+        "save_path": "/home/shared/anime"
+    },
+    "ebooks": {
+        "save_path": ""
+    },
+    "iso": {
+        "save_path": "/home/gin/media/iso"
+    },
+    "manga": {
+        "download_path": "/home/gin/media/torrent",
+        "save_path": "/home/gin/media/manga"
+    },
+    "movies": {
+        "download_path": "/home/gin/media/torrent",
+        "save_path": "/home/shared/movies"
+    },
+    "music": {
+        "download_path": false,
+        "save_path": "/home/gin/media/torrent"
+    },
+    "p0rn": {
+        "save_path": ""
+    },
+    "tv": {
+        "save_path": "/home/shared/tv"
+    }
+}

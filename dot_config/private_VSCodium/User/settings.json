@@ -1,0 +1,16 @@
+{
+    "editor.fontFamily": "'MonoLisa Medium', monospace",
+    "editor.fontLigatures": true,
+    "base16.generator.activatedThemes": [
+        "base16-default-dark",
+        "base16-gruvbox-dark-hard",
+        "base16-gruvbox-material-dark-hard",
+        "base16-material-darker",
+        "base16-onedark-dark",
+        "base16-tomorrow-night-dark",
+        "base16-tomorrow-night-eighties-dark"
+    ],
+    "workbench.colorTheme": "Base16 Tomorrow Night Dark",
+    "editor.cursorStyle": "block",
+    "editor.lineHeight": 1.8
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+#*******************************************************************************
+# Author            : Gin
+# Gitlab            : https://gitlab.com/parafait
+# Use               : Set Wallpaper using feh
+#*******************************************************************************
+
+feh --no-fehbg --bg-fill --randomize ~/Pictures/walls/* 

@@ -1,0 +1,134 @@
+#########################################################################################
+# Author            : Sharath Shetty
+# Gitlab            : https://gitlab.com/parafait
+# Use               : Config for alacritty
+# reference         : DT config, Arco Default config, alacritty default
+#########################################################################################
+
+window:
+# Background opacity
+    opacity: 1.0
+# Startup Mode (changes require restart), Windowed,Maximized,Fullscreen
+    startup_mode: Maximized
+# Allow terminal applications to change Alacritty's window title.
+    dynamic_title: true
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+    history: 50000
+
+# Font configuration
+font:
+    normal:
+        family: MonoLisa
+        style: Medium
+    bold:
+        family: MonoLisa
+        style: Bold
+    italic:
+        family: MonoLisa
+        style: Medium Italic
+    bold_italic:
+        family: MonoLisa
+        style: Bold Italic
+    size: 11
+ # Offset is the extra space around each character. `offset.y` can be thought of as modifying the line spacing, 
+ # and `offset.x` as modifying the letter spacing.
+    offset:
+        x: 0
+        y: 5
+
+cursor:
+# Cursor style
+    style:
+    # Cursor shapes as ▇ Block, _ Underline and - | Beam
+        shape: Underline
+    # Cursor blinking state
+        # Values for `blinking`: Never,Off,On,Always
+        blinking: On
+        # Cursor blinking interval in milliseconds.
+        blink_interval: 750
+        # true`, the cursor will be rendered as a hollow box when window not focused
+        unfocused_hollow: true
+        # Thickness of the cursor relative to the cell
+        thickness: 0.15
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: false
+
+#######################################
+##      START OF COLOR SCHEMES       ##
+#######################################
+schemes:
+### Gruvbox dark ###
+    GruvboxDark: &GruvboxDark
+    # Default colors
+        primary:
+      # hard contrast: background = '#1d2021'
+            background: '#282828'
+      # soft contrast: background = '#32302f'
+            foreground: '#ebdbb2'
+
+    # Normal colors
+        normal:
+            black:   '#282828'
+            red:     '#cc241d'
+            green:   '#98971a'
+            yellow:  '#d79921'
+            blue:    '#458588'
+            magenta: '#b16286'
+            cyan:    '#689d6a'
+            white:   '#a89984'
+
+    # Bright colors
+        bright:
+            black:   '#928374'
+            red:     '#fb4934'
+            green:   '#b8bb26'
+            yellow:  '#fabd2f'
+            blue:    '#83a598'
+            magenta: '#d3869b'
+            cyan:    '#8ec07c'
+            white:   '#ebdbb2'
+### Tomorrow Night ###
+    TomorrowNight: &TomorrowNight
+     # Default colors
+        primary:
+            # background: '#1d1f21'
+            background: '#1f1f1f'   # slightly darker background
+            foreground: '#c5c8c6'
+
+    # Colors the cursor will use if `custom_cursor_colors` is true
+        cursor:
+            text: '#1d1f21'
+            cursor: '#ffffff'
+
+    # Normal colors
+        normal:
+            black:   '#1d1f21'
+            red:     '#cc6666'
+            green:   '#b5bd68'
+            yellow:  '#e6c547'
+            blue:    '#81a2be'
+            magenta: '#b294bb'
+            cyan:    '#70c0ba'
+            white:   '#c5c8c6'
+
+    # Bright colors
+        bright:
+            black:   '#666666'
+            red:     '#ff3334'
+            green:   '#9ec400'
+            yellow:  '#f0c674'
+            blue:    '#81a2be'
+            magenta: '#b77ee0'
+            cyan:    '#54ced6'
+            white:   '#c5c8c6'
+
+# Set the colour scheme
+colors: *TomorrowNight
