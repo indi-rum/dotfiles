@@ -1,0 +1,44 @@
+@-moz-document url-prefix("about:reader")
+{
+	h1.reader-title{
+		font-family: 'Inter', sans-serif !important;
+		font-weight:  bold !important; 
+		color: #81a2be !important;
+		font-size: 2.5rem !important;
+	}
+
+	h2{
+		font-family: 'Inter', sans-serif !important;
+		font-weight:  bold !important; 
+		color: #81a2be !important;
+		font-size: 2.0rem !important;
+	}
+
+	.reader-estimated-time{
+		font-family: 'Source Code Pro', monospace !important;
+		font-weight:  bold !important;
+		color: #cc6666 !important;	
+		font-size: 1.3rem !important;
+	}
+
+	a{
+		color: #f0c674 !important;
+	}
+
+	body.serif {
+		font-family: 'Charis SIL', serif !important ;
+	}
+    body.sans-serif{
+        font-family: 'Acumin Pro','Cantarell', serif !important ;
+    }
+
+	code{
+		font-family: 'League Mono', monospace !important;
+		font-size: 1.1rem !important;
+	}
+
+	body.dark{
+		background-color: #1d1f21 !important ;
+		color: #c5c8c6 !important;
+	}
+}
